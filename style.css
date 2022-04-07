@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  paddign: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: linear-gradient(to bottom, #ab2956, #de5c89);
+  background-repeat: none;
+}
+
+/* ////////////////////// */
+/* Header */
+/* ////////////////////// */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2rem;
+}
+
+.pig-game-title {
+  font-size: 3.2rem;
+  color: #fff;
+}
+
+.button {
+  font-size: 2.4rem;
+  width: 15rem;
+  color: #fff;
+  background-color: #4683bc;
+  border: none;
+  padding: 1rem 0;
+  border-radius: 1rem;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #2f74b3;
+}
+
+.button:active {
+  transform: scale(1.03);
+}
+
+/* ////////////////////// */
+/* article */
+/* ////////////////////// */
+
+.article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+/* ////////////////////// */
+/* boards */
+/* ////////////////////// */
+
+.pig-game-boards {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
+  height: 50rem;
+  border-radius: 4rem;
+  z-index: 1;
+}
+
+.board-1 {
+  background-color: #f3c2d3;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  opacity: 0.9;
+}
+
+.board-2 {
+  background-color: #f3c2d3;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  opacity: 0.5;
+}
+
+.pig-game-board-player-name {
+  text-align: center;
+  font-size: 5.2rem;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+}
+
+.pig-game-board-player-total-score {
+  color: #c12e61;
+  text-align: center;
+  font-size: 8rem;
+  padding-bottom: 11rem;
+}
+
+.pig-game-board-current-score-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  background-color: #de5c89;
+  border-radius: 1rem;
+  width: 20rem;
+  height: 10rem;
+  margin-bottom: 1rem;
+}
+
+.pig-game-board-current-score-title {
+  font-size: 2.4rem;
+}
+
+.pig-game-board-player-current-score {
+  font-size: 4.8rem;
+}
+
+/* ////////////////////// */
+/* Dice & Buttons */
+/* ////////////////////// */
+
+.pig-game-dice-button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: absolute;
+  z-index: 3;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+.pig-game-board-dice-img {
+  border-radius: 2.6rem;
+}
