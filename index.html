@@ -1,89 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Pig Game</title>
-  </head>
-  <body>
-    <div class="modal-wrap invisible">
-      <div class="modal invisible-modal">
-        <ion-icon class="modal-close-icon" name="close-outline"></ion-icon>
-        <h3 class="modal-rules-heading">How To Play</h3>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Pig Game</title>
+</head>
+
+<body>
+  <div class="input-field-modal-wrap">
+    <div class="input-field-modal">
+      <h3 class="modal-rules-heading">Pig</h3>
+      <div class="input-field-modal-container">
         <p class="modal-rules-description">
           Welcome to Pig, a game of chance and strategy. Test your luck and
           skill against an opponent as you race to see who can reach the
           winning score first!
         </p>
         <ol class="modal-rules-list">
-            <li class="modal-rules-list-element">Player rolls the dice</li>
-            <li class="modal-rules-list-element">If the player rolls a <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, <strong>5</strong>, or
-              <strong>6</strong>, the roll is added to the
-              players current score
-            </li>
-            <li class="modal-rules-list-element">If the player rolls a <strong>1</strong>, their current score is set to zero and their turn
-              ends</li>
-            <li class="modal-rules-list-element">If the player <strong>HOLDS</strong>, their current score is added to their total score,
-              their current score is set back to zero, and their turn ends</li>
-            <li class="modal-rules-list-element">The first player to reach 100 total score is the winner</li>
+          <li class="modal-rules-list-element">Player rolls the dice</li>
+          <li class="modal-rules-list-element">If the player rolls a <span class="roll-number">2</span>, <span
+              class="roll-number">3</span>,
+            <span class="roll-number">4</span>, <span class="roll-number">5</span>, or
+            <span class="roll-number">6</span>, the roll is added to the
+            players current score
+          </li>
+          <li class="modal-rules-list-element">If the player rolls a <span class="roll-number-1">1</span>, their current
+            score is set to
+            zero and their turn
+            ends</li>
+          <li class="modal-rules-list-element">If the player <strong>HOLDS</strong>, their current score is added to
+            their
+            total score,
+            their current score is set back to zero, and their turn ends</li>
+          <li class="modal-rules-list-element">The first player to reach <strong>The Winning Score</strong> is the
+            winner
+          </li>
           </ul>
         </ol>
+        <div class="input-field-container">
+          <div>
+            <p class="input-field-text">Enter Score</p>
+            <input class="input-field" placeholder="100" type="number">
+          </div>
+          <button class="button input-field-button">Play</button>
+        </div>
       </div>
     </div>
-    <header class="header">
-      <button class="button play-again-button">Play Again</button>
-      <h1 class="pig-game-title">Pig Game</h1>
-      <button class="button rules-button">Rules</button>
-    </header>
+  </div>
 
-    <article class="article">
+  <div class="modal-wrap invisible">
+    <div class="modal invisible-modal">
+      <ion-icon class="modal-close-icon" name="close-outline"></ion-icon>
+      <h3 class="modal-rules-heading">How To Play</h3>
+      <p class="modal-rules-description">
+        Welcome to Pig, a game of chance and strategy. Test your luck and
+        skill against an opponent as you race to see who can reach the
+        winning score first!
+      </p>
+      <ol class="modal-rules-list">
+        <li class="modal-rules-list-element">Player rolls the dice</li>
+        <li class="modal-rules-list-element">If the player rolls a <strong>2</strong>, <strong>3</strong>,
+          <strong>4</strong>, <strong>5</strong>, or
+          <strong>6</strong>, the roll is added to the
+          players current score
+        </li>
+        <li class="modal-rules-list-element">If the player rolls a <strong>1</strong>, their current score is set to
+          zero and their turn
+          ends</li>
+        <li class="modal-rules-list-element">If the player <strong>HOLDS</strong>, their current score is added to their
+          total score,
+          their current score is set back to zero, and their turn ends</li>
+        <li class="modal-rules-list-element">The first player to reach <strong>The Winning Score</strong> is the winner
+        </li>
+        </ul>
+      </ol>
+    </div>
+  </div>
+  <header class="header">
+    <button class="button play-again-button">Play Again</button>
+    <h1 class="pig-game-title">Pig Game</h1>
+    <button class="button rules-button">Rules</button>
+  </header>
 
-      <div class="pig-game-boards">
-        <div class="pig-game-dice-button-container">
-          <img class="pig-game-board-dice-img" src="imgs/dice-1.jpg" />
-          <button class="button pig-game-board-roll-button">Roll</button>
-          <button class="button pig-game-board-hold-button">Hold</button>
-        </div>
+  <article class="article">
 
-        <div class="pig-game-board board-1">
-          <h2 class="pig-game-board-player-name name-player-1">Player 1</h2>
-          <p class="pig-game-board-player-total-score total-score-player-1">
+    <div class="pig-game-boards">
+      <div class="pig-game-dice-button-container">
+        <img class="pig-game-board-dice-img" src="imgs/dice-1.jpg" />
+        <button class="button pig-game-board-roll-button">Roll</button>
+        <button class="button pig-game-board-hold-button">Hold</button>
+      </div>
+
+      <div class="pig-game-board board-1">
+        <h2 class="pig-game-board-player-name name-player-1">Player 1</h2>
+        <p class="pig-game-board-player-total-score total-score-player-1">
+          0
+        </p>
+        <div class="pig-game-board-current-score-container">
+          <p class="pig-game-board-current-score-title">Current Score</p>
+          <p class="pig-game-board-player-current-score current-score-player-1">
             0
           </p>
-          <div class="pig-game-board-current-score-container">
-            <p class="pig-game-board-current-score-title">Current Score</p>
-            <p
-              class="pig-game-board-player-current-score current-score-player-1"
-            >
-              0
-            </p>
-          </div>
-        </div>
-
-        <div class="pig-game-board board-2 inactive-player">
-          <h2 class="pig-game-board-player-name name-player-2">Player 2</h2>
-          <p class="pig-game-board-player-total-score total-score-player-2">
-            0
-          </p>
-          <div class="pig-game-board-current-score-container">
-            <p class="pig-game-board-current-score-title">Current Score</p>
-            <p
-              class="pig-game-board-player-current-score current-score-player-2"
-            >
-              0
-            </p>
-          </div>
         </div>
       </div>
-    </article>
-    <script src="script.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  </body>
+
+      <div class="pig-game-board board-2 inactive-player">
+        <h2 class="pig-game-board-player-name name-player-2">Player 2</h2>
+        <p class="pig-game-board-player-total-score total-score-player-2">
+          0
+        </p>
+        <div class="pig-game-board-current-score-container">
+          <p class="pig-game-board-current-score-title">Current Score</p>
+          <p class="pig-game-board-player-current-score current-score-player-2">
+            0
+          </p>
+        </div>
+      </div>
+    </div>
+  </article>
+  <script src="script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
 </html>

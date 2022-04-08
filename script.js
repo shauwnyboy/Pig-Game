@@ -1,5 +1,42 @@
 "use strict";
 
+let winningScore;
+
+const closeInputFieldModal = function () {
+  const playButton = document.querySelector('.input-field-button');
+  const winningScoreInputField = document.querySelector('.input-field');
+  const inputFieldModal = document.querySelector('.input-field-modal');
+  const inputFieldModalWrap = document.querySelector('.input-field-modal-wrap');
+  const inputFieldModalContianer = document.querySelector('.input-field-modal-container');
+  const inputFieldContainer = document.querySelector('.input-field-container');
+  const modalRulesHeading = document.querySelector('.modal-rules-heading');
+
+  const closeModal = function () {
+    winningScore = winningScoreInputField.value;
+    inputFieldModalContianer.classList.add('invisible');
+    modalRulesHeading.classList.add('translate-heading-down');
+    setTimeout(() => {
+      modalRulesHeading.classList.remove('translate-heading-down');
+      inputFieldModal.classList.add('shrink');
+    }, 1000);
+    setTimeout(() => {
+      inputFieldModal.classList.add('translate-off-screen');
+
+    }, 3000);
+    setTimeout(() => {
+      inputFieldModal.classList.add('invisible');
+      inputFieldModalWrap.classList.add('invisible');
+      inputFieldContainer.classList.add('hidden');
+    }, 3500);
+    return winningScore;
+  }
+
+  playButton.addEventListener('click', closeModal)
+}
+closeInputFieldModal();
+
+
+
 const playGameFunction = function () {
   const totalScorePlayerOne = document.querySelector(".total-score-player-1");
   const totalScorePlayerTwo = document.querySelector(".total-score-player-2");
@@ -16,8 +53,6 @@ const playGameFunction = function () {
   currentScorePlayerTwo.value = 0;
 
   let activePlayer = 0;
-
-  const victoryScore = 10;
 
   let buttonRoll = document.querySelector(".pig-game-board-roll-button");
   let buttonHold = document.querySelector(".pig-game-board-hold-button");
@@ -39,14 +74,14 @@ const playGameFunction = function () {
   };
 
   const checkWinner = function () {
-    if (activePlayer === 0 && totalScorePlayerOne.value >= victoryScore) {
+    if (activePlayer === 0 && totalScorePlayerOne.value >= winningScore) {
       totalScorePlayerOne.textContent = "🎉";
       totalScorePlayerTwo.textContent = "❌";
       buttonRoll.disabled = true;
       buttonHold.disabled = true;
     } else if (
       activePlayer === 1 &&
-      totalScorePlayerTwo.value >= victoryScore
+      totalScorePlayerTwo.value >= winningScore
     ) {
       totalScorePlayerOne.textContent = "❌";
       totalScorePlayerTwo.textContent = "🎉";
@@ -92,14 +127,14 @@ const playGameFunction = function () {
       totalScorePlayerOne.textContent = totalScorePlayerOne.value;
       currentScorePlayerOne.value = currentScorePlayerOne.textContent = 0;
       checkWinner();
-      if (totalScorePlayerOne.value >= victoryScore) return;
+      if (totalScorePlayerOne.value >= winningScore) return;
       switchPlayers();
     } else if (activePlayer === 1) {
       totalScorePlayerTwo.value += currentScorePlayerTwo.value;
       totalScorePlayerTwo.textContent = totalScorePlayerTwo.value;
       currentScorePlayerTwo.value = currentScorePlayerTwo.textContent = 0;
       checkWinner();
-      if (totalScorePlayerTwo.value >= victoryScore) return;
+      if (totalScorePlayerTwo.value >= winningScore) return;
       switchPlayers();
     }
   };
