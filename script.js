@@ -21,10 +21,12 @@ const playGameFunction = function () {
 
   let buttonRoll = document.querySelector(".pig-game-board-roll-button");
   let buttonHold = document.querySelector(".pig-game-board-hold-button");
+  let buttonPlayAgain = document.querySelector(".play-again-button");
+
+  let boardPlayerOne = document.querySelector(".board-1");
+  let boardPlayerTwo = document.querySelector(".board-2");
 
   const switchPlayers = function () {
-    let boardPlayerOne = document.querySelector(".board-1");
-    let boardPlayerTwo = document.querySelector(".board-2");
     if (activePlayer === 0) {
       activePlayer = 1;
       boardPlayerOne.classList.add("inactive-player");
@@ -102,8 +104,44 @@ const playGameFunction = function () {
     }
   };
 
+  const playAgain = function () {
+    activePlayer = 0;
+    boardPlayerOne.classList.remove("inactive-player");
+    boardPlayerTwo.classList.add("inactive-player");
+    currentScorePlayerOne.value = 0;
+    currentScorePlayerOne.textContent = 0;
+    currentScorePlayerTwo.value = 0;
+    currentScorePlayerTwo.textContent = 0;
+    totalScorePlayerOne.value = 0;
+    totalScorePlayerOne.textContent = 0;
+    totalScorePlayerTwo.value = 0;
+    totalScorePlayerTwo.textContent = 0;
+    buttonRoll.disabled = false;
+    buttonHold.disabled = false;
+  };
+
   buttonRoll.addEventListener("click", rollDice);
   buttonHold.addEventListener("click", holdScore);
+  buttonPlayAgain.addEventListener("click", playAgain);
 };
-
 playGameFunction();
+
+const modalFunction = function () {
+  const buttonRules = document.querySelector(".rules-button");
+  const modal = document.querySelector(".modal");
+  const modalWrap = document.querySelector(".modal-wrap");
+  const modalCloseIcon = document.querySelector(".modal-close-icon");
+
+  const openModal = function () {
+    modal.classList.remove("invisible-modal");
+    modalWrap.classList.remove("invisible");
+  };
+  const closeModal = function () {
+    modal.classList.add("invisible-modal");
+    modalWrap.classList.add("invisible");
+  };
+
+  buttonRules.addEventListener("click", openModal);
+  modalCloseIcon.addEventListener("click", closeModal);
+};
+modalFunction();

@@ -4,17 +4,46 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Pig Game</title>
   </head>
   <body>
+    <div class="modal-wrap invisible">
+      <div class="modal invisible-modal">
+        <ion-icon class="modal-close-icon" name="close-outline"></ion-icon>
+        <h3 class="modal-rules-heading">How To Play</h3>
+        <p class="modal-rules-description">
+          Welcome to Pig, a game of chance and strategy. Test your luck and
+          skill against an opponent as you race to see who can reach the
+          winning score first!
+        </p>
+        <ol class="modal-rules-list">
+            <li class="modal-rules-list-element">Player rolls the dice</li>
+            <li class="modal-rules-list-element">If the player rolls a <strong>2</strong>, <strong>3</strong>, <strong>4</strong>, <strong>5</strong>, or
+              <strong>6</strong>, the roll is added to the
+              players current score
+            </li>
+            <li class="modal-rules-list-element">If the player rolls a <strong>1</strong>, their current score is set to zero and their turn
+              ends</li>
+            <li class="modal-rules-list-element">If the player <strong>HOLDS</strong>, their current score is added to their total score,
+              their current score is set back to zero, and their turn ends</li>
+            <li class="modal-rules-list-element">The first player to reach 100 total score is the winner</li>
+          </ul>
+        </ol>
+      </div>
+    </div>
     <header class="header">
-      <button class="button nav-button play-again-button">Play Again</button>
+      <button class="button play-again-button">Play Again</button>
       <h1 class="pig-game-title">Pig Game</h1>
-      <button class="button nav-button rules-button">Rules</button>
+      <button class="button rules-button">Rules</button>
     </header>
 
     <article class="article">
+
       <div class="pig-game-boards">
         <div class="pig-game-dice-button-container">
           <img class="pig-game-board-dice-img" src="imgs/dice-1.jpg" />
@@ -54,5 +83,7 @@
       </div>
     </article>
     <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   </body>
 </html>
