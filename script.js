@@ -112,22 +112,25 @@ const playGameFunction = function () {
   const rollDice = function () {
     let diceImg = document.querySelector(".pig-game-board-dice-img");
     const randomNumber = Number(Math.floor(1 + Math.random() * 6));
-    diceImg.classList.add("invisible");
+    diceImg.classList.toggle('rotate-dice');
+    setTimeout(() => {
+      diceImg.classList.add("invisible");
+    }, 100);
     setTimeout(() => {
       diceImg.classList.remove("invisible");
-    }, 200);
+    }, 300);
     diceImg.src = `imgs/dice-${randomNumber}.jpg`;
     if (activePlayer === 0) {
       currentScorePlayerOne.value += randomNumber;
       setTimeout(() => {
         currentScorePlayerOne.textContent = currentScorePlayerOne.value;
-      }, 200);
+      }, 400);
     }
     if (activePlayer === 1) {
       currentScorePlayerTwo.value += randomNumber;
       setTimeout(() => {
         currentScorePlayerTwo.textContent = currentScorePlayerTwo.value;
-      }, 200);
+      }, 400);
     }
     if (randomNumber === 1 && activePlayer === 0) {
       currentScorePlayerOne.value = 0;
