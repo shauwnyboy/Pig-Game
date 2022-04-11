@@ -17,16 +17,18 @@
     background-color: white;
   }
 
-  .play-again-rules-container {
-    top: -12rem;
+  .navigation-menu {
+    flex-direction: column;
+    padding: 2rem 0;
+    top: -100vh;
     right: 0;
     position: absolute;
-    background-color: white;
-    height: 12rem;
+    background-color: rgba(243, 194, 211, 0.95);
+    height: 100vh;
     width: 100%;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    z-index: 9999;
+    z-index: 9998;
     padding: 0;
   }
 
@@ -73,6 +75,38 @@
   .modal-rules-list-element {
     font-size: 1.2rem;
   }
+
+  .burger-1 {
+    transition: all 0.5s;
+  }
+
+  .burger-2 {
+    transition: all 0.5s;
+  }
+
+  .burger-3 {
+    transition: all 0.5s;
+  }
+
+  .translate-nav {
+    transform: translateY(100vh);
+  }
+
+  .top-z-index {
+    z-index: 9999;
+  }
+
+  .transform-burger-1 {
+    transform: rotate(45deg) translate(0.7rem, 0.5rem);
+  }
+
+  .transform-burger-3 {
+    transform: rotate(135deg) translate(-0.8rem, 0.7rem);
+  }
+
+  .translate-burger-3 .invisible {
+    opacity: 0;
+  }
 }
 
 /* ////////// */
@@ -80,6 +114,10 @@
 /* /////////// */
 
 @media (max-width: 41em) {
+
+  .navigation-menu button {
+    font-size: 1.8rem;
+  }
 
   .pig-game-boards {
     height: 52rem;

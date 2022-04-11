@@ -183,3 +183,25 @@ const playGameFunction = function () {
   buttonPlayAgain.addEventListener("click", playAgain);
 };
 playGameFunction();
+
+
+const navigationModalFunction = function () {
+  const burger = document.querySelector('.burger');
+  const navigationMenu = document.querySelector('.navigation-menu');
+  const burger1 = document.querySelector('.burger-1');
+  const burger2 = document.querySelector('.burger-2');
+  const burger3 = document.querySelector('.burger-3');
+  const openNav = function () {
+    navigationMenu.classList.toggle('translate-nav');
+    burger1.classList.toggle('transform-burger-1');
+    burger1.classList.toggle('top-z-index');
+    burger3.classList.toggle('transform-burger-3');
+    burger3.classList.toggle('top-z-index');
+    burger2.classList.toggle('invisible');
+  }
+
+
+  burger.addEventListener('click', openNav);
+
+}
+navigationModalFunction();
