@@ -249,7 +249,7 @@ body {
 }
 
 .input-field-modal-container {
-  transition: all 1s;
+  transition: all 0.5s;
 }
 
 .input-field-container {
@@ -312,10 +312,6 @@ body {
   font-size: 0.1px;
   width: 12rem;
   height: 6rem;
-}
-
-.translate-off-screen {
-  transform: translateY(-1000rem);
 }
 
 .translate-heading-down {

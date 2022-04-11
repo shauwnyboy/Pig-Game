@@ -14,20 +14,15 @@ const closeInputFieldModal = function () {
   const closeModal = function () {
     winningScore = winningScoreInputField.value;
     inputFieldModalContianer.classList.add('invisible');
-    modalRulesHeading.classList.add('translate-heading-down');
     setTimeout(() => {
       modalRulesHeading.classList.remove('translate-heading-down');
       inputFieldModal.classList.add('shrink');
-    }, 1000);
-    setTimeout(() => {
-      inputFieldModal.classList.add('translate-off-screen');
-
-    }, 3000);
+    }, 300);
     setTimeout(() => {
       inputFieldModal.classList.add('invisible');
       inputFieldModalWrap.classList.add('invisible');
       inputFieldContainer.classList.add('hidden');
-    }, 3500);
+    }, 500);
     return winningScore;
   }
 
