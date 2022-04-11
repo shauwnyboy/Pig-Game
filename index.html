@@ -12,9 +12,9 @@
 </head>
 
 <body>
-  <div class="input-field-modal-wrap">
-    <div class="input-field-modal">
-      <div class="input-field-modal-container">
+  <div class="modal-wrap">
+    <div class="modal">
+      <div class="modal-container">
         <h3 class="modal-rules-heading">Pig</h3>
         <p class="modal-rules-description">
           Welcome to Pig, a game of chance and strategy. Test your luck and
@@ -42,43 +42,19 @@
           </li>
           </ul>
         </ol>
-        <div class="input-field-container">
-          <div>
-            <p class="input-field-text">Enter Score</p>
-            <input class="input-field" placeholder="100" type="number">
+        <div class="modal-input-button-container">
+          <div class="modal-input-field-container">
+            <div>
+              <p class="input-field-text">Enter Score</p>
+              <input class="input-field" placeholder="100" type="number">
+            </div>
+            <button class="button modal-play-button">Play</button>
           </div>
-          <button class="button input-field-button">Play</button>
+          <div class="modal-close-button-container hidden">
+            <button class="button modal-close-button">Got It</button>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-
-  <div class="modal-wrap invisible">
-    <div class="modal invisible-modal">
-      <ion-icon class="modal-close-icon" name="close-outline"></ion-icon>
-      <h3 class="modal-rules-heading">How To Play</h3>
-      <p class="modal-rules-description">
-        Welcome to Pig, a game of chance and strategy. Test your luck and
-        skill against an opponent as you race to see who can reach the
-        winning score first!
-      </p>
-      <ol class="modal-rules-list">
-        <li class="modal-rules-list-element">Player rolls the dice</li>
-        <li class="modal-rules-list-element">If the player rolls a <strong>2</strong>, <strong>3</strong>,
-          <strong>4</strong>, <strong>5</strong>, or
-          <strong>6</strong>, the roll is added to the
-          players current score
-        </li>
-        <li class="modal-rules-list-element">If the player rolls a <strong>1</strong>, their current score is set to
-          zero and their turn
-          ends</li>
-        <li class="modal-rules-list-element">If the player <strong>HOLDS</strong>, their current score is added to their
-          total score,
-          their current score is set back to zero, and their turn ends</li>
-        <li class="modal-rules-list-element">The first player to reach <strong>The Winning Score</strong> is the winner
-        </li>
-        </ul>
-      </ol>
     </div>
   </div>
   <header class="header">

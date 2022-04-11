@@ -2,34 +2,48 @@
 
 let winningScore;
 
-const closeInputFieldModal = function () {
-  const playButton = document.querySelector('.input-field-button');
+const modalFunction = function () {
+  const playButton = document.querySelector('.modal-play-button');
   const winningScoreInputField = document.querySelector('.input-field');
-  const inputFieldModal = document.querySelector('.input-field-modal');
-  const inputFieldModalWrap = document.querySelector('.input-field-modal-wrap');
-  const inputFieldModalContianer = document.querySelector('.input-field-modal-container');
-  const inputFieldContainer = document.querySelector('.input-field-container');
+  const modal = document.querySelector('.modal');
+  const modalWrap = document.querySelector('.modal-wrap');
+  const modalContainer = document.querySelector('.modal-container');
+  const inputFieldContainer = document.querySelector('.modal-input-field-container');
   const modalRulesHeading = document.querySelector('.modal-rules-heading');
+  const rulesButton = document.querySelector('.rules-button');
+  const closeModalButton = document.querySelector('.modal-close-button');
+  const modalCloseButtonContainer = document.querySelector('.modal-close-button-container');
 
   const closeModal = function () {
     winningScore = winningScoreInputField.value;
-    inputFieldModalContianer.classList.add('invisible');
+    modalContainer.classList.add('invisible');
     setTimeout(() => {
-      modalRulesHeading.classList.remove('translate-heading-down');
-      inputFieldModal.classList.add('shrink');
+      modal.classList.add('shrink');
     }, 300);
     setTimeout(() => {
-      inputFieldModal.classList.add('invisible');
-      inputFieldModalWrap.classList.add('invisible');
+      modal.classList.add('invisible');
+      modalWrap.classList.add('invisible');
       inputFieldContainer.classList.add('hidden');
+      if (modalCloseButtonContainer.classList.contains('hidden')) {
+        modalCloseButtonContainer.classList.remove('hidden');
+      }
     }, 500);
     return winningScore;
   }
 
-  playButton.addEventListener('click', closeModal)
+  const openModal = function () {
+    modal.classList.remove('shrink');
+    modal.classList.remove('invisible');
+    modalWrap.classList.remove('invisible');
+    setTimeout(() => {
+      modalContainer.classList.remove('invisible');
+    }, 200);
+  }
+  playButton.addEventListener('click', closeModal);
+  rulesButton.addEventListener('click', openModal);
+  closeModalButton.addEventListener('click', closeModal);
 }
-closeInputFieldModal();
-
+modalFunction();
 
 
 const playGameFunction = function () {
@@ -155,23 +169,3 @@ const playGameFunction = function () {
   buttonPlayAgain.addEventListener("click", playAgain);
 };
 playGameFunction();
-
-const modalFunction = function () {
-  const buttonRules = document.querySelector(".rules-button");
-  const modal = document.querySelector(".modal");
-  const modalWrap = document.querySelector(".modal-wrap");
-  const modalCloseIcon = document.querySelector(".modal-close-icon");
-
-  const openModal = function () {
-    modal.classList.remove("invisible-modal");
-    modalWrap.classList.remove("invisible");
-  };
-  const closeModal = function () {
-    modal.classList.add("invisible-modal");
-    modalWrap.classList.add("invisible");
-  };
-
-  buttonRules.addEventListener("click", openModal);
-  modalCloseIcon.addEventListener("click", closeModal);
-};
-modalFunction();
