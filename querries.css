@@ -1,0 +1,23 @@
+/* ////////// */
+/* below 864 px */
+/* /////////// */
+@media (max-width: 54em) {
+  .pig-game-board-current-score-container {
+    width: 15rem;
+  }
+
+  .pig-game-board-current-score-title {
+    font-size: 1.8rem;
+  }
+
+  .pig-game-board-dice-img {
+    width: 90%;
+    border-radius: 2rem;
+  }
+
+
+  .pig-game-board-roll-button,
+  .pig-game-board-hold-button {
+    width: 12rem;
+  }
+}

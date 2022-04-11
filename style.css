@@ -135,6 +135,8 @@ body {
 .pig-game-dice-button-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 2rem;
   position: absolute;
   z-index: 1;
@@ -144,7 +146,7 @@ body {
 }
 
 .pig-game-board-dice-img {
-  border-radius: 2.6rem;
+  border-radius: 2.2rem;
 }
 
 .pig-game-board-roll-button {
