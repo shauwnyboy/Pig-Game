@@ -2,12 +2,44 @@
 /* below 864 px */
 /* /////////// */
 @media (max-width: 54em) {
+
+  .burger {
+    display: flex;
+    height: 3rem;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .burger-icon-piece {
+    display: block;
+    width: 4rem;
+    height: .3rem;
+    background-color: white;
+  }
+
+  .play-again-rules-container {
+    top: -12rem;
+    right: 0;
+    position: absolute;
+    background-color: white;
+    height: 12rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 0;
+  }
+
   .pig-game-board-current-score-container {
     width: 15rem;
   }
 
   .pig-game-board-current-score-title {
     font-size: 1.8rem;
+  }
+
+  .pig-game-board-player-current-score {
+    font-size: 3.6rem;
   }
 
   .pig-game-board-dice-img {
@@ -19,5 +51,150 @@
   .pig-game-board-roll-button,
   .pig-game-board-hold-button {
     width: 12rem;
+  }
+
+  .pig-game-board-player-name {
+    font-size: 4.6rem;
+  }
+
+  .pig-game-board-player-total-score {
+    font-size: 6rem;
+    padding-bottom: 13rem;
+  }
+
+  .modal-rules-heading {
+    font-size: 2.8rem;
+  }
+
+  .modal-rules-description {
+    font-size: 1.2rem;
+  }
+
+  .modal-rules-list-element {
+    font-size: 1.2rem;
+  }
+}
+
+/* ////////// */
+/* below 656 px */
+/* /////////// */
+
+@media (max-width: 41em) {
+
+  .pig-game-boards {
+    height: 52rem;
+  }
+
+  .pig-game-board {
+    height: 35rem;
+    margin-top: 5rem;
+  }
+
+
+  .pig-game-board-current-score-container {
+    width: 10rem;
+    height: 8rem;
+  }
+
+  .pig-game-board-current-score-title {
+    font-size: 1.2rem;
+  }
+
+  .pig-game-board-player-current-score {
+    font-size: 3.2rem;
+  }
+
+  .pig-game-board-dice-img {
+    width: 60%;
+    border-radius: 1.2rem;
+  }
+
+
+  .pig-game-board-roll-button,
+  .pig-game-board-hold-button {
+    width: 8rem;
+    font-size: 1.6rem;
+  }
+
+  .pig-game-board-player-name {
+    font-size: 3.8rem;
+  }
+
+  .pig-game-board-player-total-score {
+    font-size: 6rem;
+    padding-bottom: 4rem;
+  }
+
+  .modal-rules-heading {
+    font-size: 2.4rem;
+  }
+
+  .modal-rules-description {
+    font-size: 1rem;
+  }
+
+  .modal-rules-list-element {
+    font-size: 1rem;
+  }
+
+  .pig-game-dice-button-container {
+    top: 50%;
+  }
+
+}
+
+/* /////////// */
+/* below 425 px */
+/* /////////// */
+
+@media (max-width: 27em) {
+  .pig-game-title {
+    font-size: 3.6rem;
+  }
+
+  .header {
+    padding: 2rem 0 0 0;
+  }
+
+  .pig-game-board-dice-img {
+    width: 50%;
+    border-radius: 1rem;
+  }
+
+  .pig-game-board-roll-button,
+  .pig-game-board-hold-button {
+    font-size: 1rem;
+    width: 5rem;
+  }
+
+  .pig-game-board-current-score-container {
+    width: 7rem;
+    height: 5.5rem;
+  }
+
+  .pig-game-board-current-score-title {
+    font-size: .8rem;
+  }
+
+  .pig-game-board-player-current-score {
+    font-size: 2rem;
+  }
+
+  .pig-game-board-player-name {
+    font-size: 3.2rem;
+    padding-top: 1rem;
+  }
+
+  .pig-game-board {
+    height: 25rem;
+  }
+
+  .pig-game-board-roll-button {
+    margin-top: 3rem;
+  }
+
+  .pig-game-dice-button-container {
+    top: 40%;
+    gap: 0.5rem;
   }
 }

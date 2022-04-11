@@ -20,6 +20,7 @@ body {
 /* ////////////////////// */
 
 .header {
+  margin: 0 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,8 +28,14 @@ body {
 }
 
 .pig-game-title {
-  font-size: 3.2rem;
+  font-size: 4.8rem;
   color: #fff;
+}
+
+.play-again-rules-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
 }
 
 .button {
@@ -48,6 +55,20 @@ body {
 
 .button:active {
   transform: scale(1.03);
+}
+
+.burger {
+  display: none;
+  height: 3rem;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.burger-icon-piece {
+  display: none;
+  width: 4rem;
+  height: .3rem;
+  background-color: white;
 }
 
 /* ////////////////////// */
@@ -325,12 +346,8 @@ body {
   height: 6rem;
 }
 
-.translate-heading-down {
-  transform: translateY(18rem);
-}
-
-.translate-heading-up {
-  transform: translateY(-17rem);
+.translate-nav {
+  transform: translateY(12rem);
 }
 
 .hidden {
