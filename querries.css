@@ -194,7 +194,11 @@
   }
 
   .pig-game-dice-button-container {
-    top: 40%;
+    top: 30%;
     gap: 0.5rem;
+  }
+
+  .pig-game-boards {
+    height: 70rem;
   }
 }
